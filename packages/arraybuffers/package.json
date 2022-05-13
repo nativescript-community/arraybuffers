@@ -1,0 +1,47 @@
+{
+    "name": "@nativescript-community/arraybuffers",
+    "version": "0.0.0",
+    "description": "Utility methods to work with Array Buffers in Nativescript",
+    "main": "index",
+    "sideEffects": false,
+    "typings": "index.d.ts",
+    "scripts": {
+        "build": "npm run tsc && npm run readme",
+        "build.win": "npm run tsc.win && npm run readme",
+        "build.all": "npm run build",
+        "build.all.win": "npm run build .win",
+        "build.angular": "../../node_modules/.bin/ng-packagr -p ../../src/arraybuffers/angular/package.json -c ../../src/arraybuffers/angular/tsconfig.json",
+        "build.angular.win": "..\\..\\node_modules\\.bin\\ng-packagr -p ..\\..\\src\\arraybuffers\\angular\\package.json -c ..\\..\\src\\arraybuffers\\angular\\tsconfig.json",
+        "readme": "../../node_modules/.bin/readme generate -c ../../tools/readme/blueprint.json",
+        "tsc": "../../node_modules/.bin/cpy '**/*.d.ts' '../../packages/arraybuffers' --parents --cwd=../../src/arraybuffers && ../../node_modules/.bin/tsc -skipLibCheck -d",
+        "tsc.win": "..\\..\\node_modules\\.bin\\cpy '**\\*.d.ts' '..\\..\\packages\\arraybuffers' --parents --cwd=..\\..\\src\\arraybuffers && ..\\..\\node_modules\\.bin\\tsc -skipLibCheck -d",
+        "clean": "../../node_modules/.bin/rimraf ./*.d.ts ./*.js ./*.js.map",
+        "clean.win": "..\\..\\node_modules\\.bin\\rimraf .\\*.d.ts .\\*.js .\\*.js.map"
+    },
+    "nativescript": {
+        "platforms": {
+            "android": "6.2.1",
+            "ios": "6.2.1"
+        }
+    },
+    "keywords": [
+        "NativeScript",
+        "JavaScript",
+        "iOS",
+        "Android"
+    ],
+    "author": {
+        "name": "Martin Guillon",
+        "email": "martin.guillon@akylas.fr"
+    },
+    "bugs": {
+        "url": "https://github.com/nativescript-community/arraybuffers/issues"
+    },
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nativescript-community/arraybuffers"
+    },
+    "bootstrapper": "nativescript-plugin-seed",
+    "gitHead": "531e9068c445832a6faf6bb8e227b738baa6ef18"
+}

@@ -1,0 +1,52 @@
+{
+    "name": "@nativescript-community/arraybuffers",
+    "version": "2.0.0",
+    "homepage": "https://github.com/nativescript-community/arraybuffers#readme",
+    "bugs": {
+        "url": "https://github.com/nativescript-community/arraybuffers/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nativescript-community/arraybuffers.git"
+    },
+    "license": "ISC",
+    "author": "",
+    "scripts": {
+        "build": "lerna run build",
+        "build.watch": "lerna run build.watch --parallel",
+        "build.all": "npm run build",
+        "clean": "rimraf 'packages/**/*.d.ts' 'packages/**/*.js' 'packages/**/*.js.map' 'packages/**/*.metadata.json' 'packages/**/*.ngsummary.json' 'packages/**/*.mjs' 'packages/**/*.mjs.map' 'packages/**/node_modules' 'packages/**/angular/package.json' 'package-lock.json' 'pnpm-lock.yaml' 'node_modules'",
+        "commitmsg": "commitlint -e $GIT_PARAMS",
+        "postinstall": "npm run setup",
+        "publish": "npm run setup && npm run build.all && lerna publish --create-release=github --force-publish",
+        "readme": "node ./tools/readme.js",
+        "setup": "npm run submodules && ts-patch install",
+        "start": "./node_modules/.bin/ntl -A -s 15 -o",
+        "submodules": "git submodule update --init",
+        "sync": "node ./tools/sync.js",
+        "sync.test": "node ./tools/sync.js",
+        "tsc": "cpy '**/*.d.ts' '../plugin' --parents --cwd=src && tsc -skipLibCheck -d",
+        "update": "node ./tools/update.js"
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    },
+    "dependencies": {
+        "@nativescript-community/plugin-seed-tools": "file:tools"
+    },
+    "ntl": {
+        "descriptions": {
+            "build": "Build the plugin",
+            "build.all": "Build the plugin for all platforms",
+            "clean": "Clean the local environment.",
+            "watch": "Watch for changes in the plugin source and re-build."
+        }
+    },
+    "dependenciesMeta": {
+        "@nativescript-community/plugin-seed-tools": {
+            "injected": true
+        }
+    }
+}

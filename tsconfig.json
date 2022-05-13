@@ -1,0 +1,9 @@
+{
+    "extends": "./tools/tsconfig",
+    "compilerOptions": {
+        "paths": {
+            "@nativescript-community/arraybuffers": ["src/arraybuffers"],
+            "@nativescript-community/arraybuffers/*": ["src/arraybuffers/*"]
+        }
+    }
+}

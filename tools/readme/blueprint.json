@@ -1,0 +1,10 @@
+{
+	"line": "none",
+    "ids": {
+        "npm": "{{ pkg.name }}"
+    },
+    "headingPrefix": {
+        "1": "",
+        "2": ""
+    }
+}

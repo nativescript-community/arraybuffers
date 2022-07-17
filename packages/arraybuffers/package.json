@@ -1,6 +1,6 @@
 {
     "name": "@nativescript-community/arraybuffers",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Utility methods to work with Array Buffers in Nativescript",
     "main": "index",
     "sideEffects": false,

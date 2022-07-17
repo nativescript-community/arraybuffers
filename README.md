@@ -31,42 +31,38 @@
 
 <br />
 
-
-
 [](#table-of-contents)
-
 
 [](#table-of-contents)
 
 ## Table of Contents
 
-* [Installation](#installation)
-* [API](#api)
-
+-   [Installation](#installation)
+-   [API](#api)
 
 [](#installation)
-
 
 [](#installation)
 
 ## Installation
+
 Run the following command from the root of your project:
 
 `ns plugin add @nativescript-community/arraybuffers`
 
-
 [](#api)
-
 
 [](#api)
 
 ## API
+
 This is a simple Array Buffers helpers for Nativescript to use optimized arrays on Android
 It exposes a few methods:
+
 ```ts
 type FloatArray = Float32Array | Float64Array | Uint8Array;
 type TypedArray = FloatArray | Uint8Array;
-function createArrayBuffer(length: number, useInts?: boolean): TypedArray;
+function createArrayBuffer(length: number, useInts?: boolean, canReturnBuffer?: boolean): TypedArray;
 function createNativeArray(length: number, useInts?: boolean): number[];
 function pointsFromBuffer(typedArray: TypedArray, useInts?: boolean, canReturnBuffer?: boolean): number[] | TypedArray;
 function arrayToNativeArray(array, useInts?: boolean, canReturnBuffer?: boolean): number[];

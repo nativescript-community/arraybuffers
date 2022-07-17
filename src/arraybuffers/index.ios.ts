@@ -1,8 +1,8 @@
 const FloatConstructor = interop.sizeof(interop.types.id) === 4 ? Float32Array : Float64Array;
 
-// export function createArrayBufferOrNativeArray(length: number, useInts = false) {
-//     return createArrayBuffer(length, useInts);
-// }
+export function createArrayBufferOrNativeArray(length: number, useInts = false) {
+    return createArrayBuffer(length, useInts);
+}
 export function createArrayBuffer(length: number, useInts = false) {
     if (useInts) {
         return new Int8Array(length);

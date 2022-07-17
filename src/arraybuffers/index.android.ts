@@ -20,13 +20,13 @@ export function createNativeArray(length, useInts = false): number[] {
         return Array.create('float', length);
     }
 }
-// export function createArrayBufferOrNativeArray(length: number, useInts = false, canReturnBuffer = true) {
-//     // if (!supportsDirectArrayBuffers() || !canReturnBuffer) {
-//     //     return createNativeArray(length, useInts);
-//     // } else {
-//     return createArrayBuffer(length, useInts, canReturnBuffer);
-//     // }
-// }
+export function createArrayBufferOrNativeArray(length: number, useInts = false, canReturnBuffer = true) {
+    if (!supportsDirectArrayBuffers() || !canReturnBuffer) {
+        return createNativeArray(length, useInts);
+    } else {
+        return createArrayBuffer(length, useInts, canReturnBuffer);
+    }
+}
 export function createArrayBuffer(length: number, useInts = false, canReturnBuffer = true): TypedArray {
     if (!supportsDirectArrayBuffers() || !canReturnBuffer) {
         let bb: java.nio.ByteBuffer;
@@ -44,7 +44,6 @@ export function createArrayBuffer(length: number, useInts = false, canReturnBuff
 }
 export function pointsFromBuffer(typedArray: TypedArray, useInts = false, canReturnBuffer = true) {
     if (!supportsDirectArrayBuffers() || !canReturnBuffer) {
-
         if (useInts) {
             const buffer = typedArray.buffer;
             return ((buffer as any).nativeObject as java.nio.ByteBuffer).array();

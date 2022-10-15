@@ -44,12 +44,17 @@ export function createArrayBuffer(length: number, useInts = false, canReturnBuff
 }
 export function pointsFromBuffer(typedArray: TypedArray, useInts = false, canReturnBuffer = true) {
     if (!supportsDirectArrayBuffers() || !canReturnBuffer) {
+        let buffer = typedArray.buffer;
+        const length = typedArray.length;
+        if (!buffer['nativeObject']) {
+            const newTypedArray = createArrayBuffer(buffer.byteLength, useInts, false);
+            newTypedArray.set(typedArray);
+            buffer = newTypedArray.buffer;
+        }
         if (useInts) {
             const buffer = typedArray.buffer;
             return ((buffer as any).nativeObject as java.nio.ByteBuffer).array();
         }
-        const buffer = typedArray.buffer;
-        const length = typedArray.length;
         const testArray = Array.create('float', length);
         ((buffer as any).nativeObject as java.nio.ByteBuffer).asFloatBuffer().get(testArray, 0, length);
         return testArray as number[];

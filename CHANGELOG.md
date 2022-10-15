@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://github.com/nativescript-community/arraybuffers/compare/v1.0.1...v1.0.2) (2022-10-15)
+
+
+### Bug Fixes
+
+* **android:** create native buffer if it does not exist ([ac41543](https://github.com/nativescript-community/arraybuffers/commit/ac415439a5d126b5c9d371f73fd77d8d3136d5ff))
+
+
+
+
+
 ## [1.0.1](https://github.com/nativescript-community/arraybuffers/compare/v1.0.0...v1.0.1) (2022-07-17)
 
 

@@ -52,7 +52,9 @@ export function pointsFromBuffer(typedArray: TypedArray, useInts = false, canRet
             buffer = newTypedArray.buffer;
         }
         if (useInts) {
-            return ((buffer as any).nativeObject as java.nio.ByteBuffer).array();
+            const bytes = Array.create('byte', buffer.byteLength);
+            ((buffer as any).nativeObject as java.nio.ByteBuffer).get(bytes);
+            return bytes;
         }
         const testArray = Array.create('float', length);
         ((buffer as any).nativeObject as java.nio.ByteBuffer).asFloatBuffer().get(testArray, 0, length);

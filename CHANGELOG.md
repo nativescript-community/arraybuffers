@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://github.com/nativescript-community/arraybuffers/compare/v1.0.2...v1.0.3) (2022-10-17)
+
+
+### Bug Fixes
+
+* **android:** wrong buffer returned in `pointsFromBuffer` ([532c93e](https://github.com/nativescript-community/arraybuffers/commit/532c93e892e182f8b3199dcdd3dfe8b8664b9cdf))
+
+
+
+
+
 ## [1.0.2](https://github.com/nativescript-community/arraybuffers/compare/v1.0.1...v1.0.2) (2022-10-15)
 
 

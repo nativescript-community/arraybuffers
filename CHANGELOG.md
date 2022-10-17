@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/nativescript-community/arraybuffers/compare/v1.0.3...v1.1.0) (2022-10-17)
+
+
+### Bug Fixes
+
+* **android:** `array()` cant be used as it will have more data than expected ([66e2a5d](https://github.com/nativescript-community/arraybuffers/commit/66e2a5d4b9a35eb0d2721e63754997a4f86bb4b7))
+* **android:** ensure we rewind the buffer before accessing its data ([43cb8ca](https://github.com/nativescript-community/arraybuffers/commit/43cb8cafe771ddf49dffb0cfc298b601227ae961))
+
+
+### Features
+
+* **android:** native api usage ([59456bf](https://github.com/nativescript-community/arraybuffers/commit/59456bf0421138cf7a84de3cdd4012c9f5009faf))
+
+
+
+
+
 ## [1.0.3](https://github.com/nativescript-community/arraybuffers/compare/v1.0.2...v1.0.3) (2022-10-17)
 
 

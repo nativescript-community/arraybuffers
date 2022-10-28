@@ -1,5 +1,6 @@
 {
     "uses":[
-        "java.nio:ByteBuffer*"
+        "java.nio:ByteBuffer*",
+        "java.nio:Buffer*"
     ]
 }

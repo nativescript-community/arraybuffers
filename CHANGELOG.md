@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/nativescript-community/arraybuffers/compare/v1.1.2...v1.1.3) (2023-08-10)
+
+### Bug Fixes
+
+* **android:** rollback previous change as it was broken ([478150b](https://github.com/nativescript-community/arraybuffers/commit/478150bfe4902a49f3198aad2f74f945ae83d601))
+
 ## [1.1.2](https://github.com/nativescript-community/arraybuffers/compare/v1.1.1...v1.1.2) (2023-08-10)
 
 ### Bug Fixes

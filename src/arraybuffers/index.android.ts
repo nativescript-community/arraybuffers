@@ -53,9 +53,9 @@ export function pointsFromBuffer(typedArray: TypedArray, useInts = false, canRet
         }
         if (useInts) {
             const bytuffer = (buffer as any).nativeObject as java.nio.ByteBuffer;
-            if (bytuffer.isDirect()) {
-                return buffer['nativeObject'].array();
-            }
+            // if (bytuffer.isDirect()) {
+            //     return buffer['nativeObject'].array();
+            // }
             bytuffer.rewind();
             const bytes = Array.create('byte', buffer.byteLength);
             bytuffer.get(bytes);

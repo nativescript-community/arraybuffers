@@ -13,9 +13,9 @@ export function supportsDirectArrayBuffers() {
     }
     return _supportsDirectArrayBuffers;
 }
-export function createNativeArray(length, useInts = false): number[] {
+export function createNativeArray(length, useInts = false, useBytes = false): number[] {
     if (useInts) {
-        return Array.create('int', length);
+        return Array.create(useBytes ? 'byte' : 'int', length);
     } else {
         return Array.create('float', length);
     }

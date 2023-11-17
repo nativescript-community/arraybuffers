@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/nativescript-community/arraybuffers/compare/v1.1.4...v1.1.5) (2023-11-17)
+
+### Bug Fixes
+
+* `arrayToNativeArray` useBytes support ([a865f60](https://github.com/nativescript-community/arraybuffers/commit/a865f60118c8394131bf44a91bcd7c88030915e8))
+
 ## [1.1.4](https://github.com/nativescript-community/arraybuffers/compare/v1.1.3...v1.1.4) (2023-11-17)
 
 ### Bug Fixes

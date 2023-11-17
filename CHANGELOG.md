@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.4](https://github.com/nativescript-community/arraybuffers/compare/v1.1.3...v1.1.4) (2023-11-17)
+
+### Bug Fixes
+
+* **android:** `createNativeArray` support for byte array ([5af81ee](https://github.com/nativescript-community/arraybuffers/commit/5af81eea4c96b2ec3fb26fd05a2004bbdf7c3ac1))
+
 ## [1.1.3](https://github.com/nativescript-community/arraybuffers/compare/v1.1.2...v1.1.3) (2023-08-10)
 
 ### Bug Fixes

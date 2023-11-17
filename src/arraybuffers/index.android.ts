@@ -68,7 +68,7 @@ export function pointsFromBuffer(typedArray: TypedArray, useInts = false, canRet
     return typedArray;
 }
 
-export function arrayToNativeArray(array: number[] | Uint8Array, useInts = false, canReturnBuffer = true) {
+export function arrayToNativeArray(array: number[] | Uint8Array, useInts = false, canReturnBuffer = true, useBytes = false) {
     const isBufferView = ArrayBuffer.isView(array);
     if (!Array.isArray(array) && !isBufferView) {
         // return so that we can now it is not supported (as not a valid array)
@@ -76,7 +76,7 @@ export function arrayToNativeArray(array: number[] | Uint8Array, useInts = false
     }
     // for now we cant do it the old way
     if (!isBufferView && supportsDirectArrayBuffers()) {
-        const nArray = createNativeArray(array.length, useInts);
+        const nArray = createNativeArray(array.length, useInts, useBytes);
         for (let index = 0; index < array.length; index++) {
             nArray[index] = array[index];
         }
